@@ -10,5 +10,5 @@
 */
 
 module.exports = (message) => {
-    console.log(`info: ${message}`)
-  }
+  console.log(`info: ${message}`)
+}
