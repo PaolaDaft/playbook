@@ -7,5 +7,5 @@ const scores12 = [
     { name: 'J', score: 100 },
   ]
   
-  const score_less_than_80 = scores12.find((user) => user.score > 80)
+  const score_less_than_80 = scores12.find((user) => user.score > 80) //Me pareace que el nombre de la funci+on seria: score_more_than_80
   console.log("Ejemplo 12. Name score found:" + score_less_than_80.name)
