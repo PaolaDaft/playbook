@@ -71,6 +71,13 @@ explorers.forEach((explorer) => console.log(`${explorer.name}: ${explorer.stack}
 console.log('\n', '-----'.repeat(6), '\n')
 
 //3.- Crea una nueva lista con las listas de stacks de cada explorer, usa MAP
+console.log('Lista de los Stacks')
+let stacks = explorers.map(function (explorer) { return explorer.stack })
+stacks = stacks.join(',').split(',')
+stacks = [...new Set(stacks)] // Elimina los elementos duplicados.
+console.log(stacks)
+console.log('\n', '-----'.repeat(6), '\n')
+
 //4.- Obtén la lista de explorers que tengan en su stack "js", usa FILTER (para validar un elemento en un lista se usa el método includes)
 //5.- Busca el primer explorer que sea de la CDMX, usa FIND
 //6.- 0Obtén la suma de todos los exercises_completed, usa REDUCE
