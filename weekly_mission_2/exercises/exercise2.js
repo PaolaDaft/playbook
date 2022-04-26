@@ -102,7 +102,11 @@ console.log(getTotalAmountCompletedExercises(explorers))
 console.log('\n', '-----'.repeat(6), '\n')
 
 //7.- Obtén la validación si al menos uno de los explorers tiene la propiedad exercisesFinished en frontend como true, usa SOME
+const areSomeTrue = explorers.some((explorer) =>  explorer.missions.frontend.exercisesFinished === true)
+console.log("¿Alguno de los explorers tiene la propiedad exercisesFinished en frontend como true?: " + areSomeTrue) //true
 console.log('\n', '-----'.repeat(6), '\n')
 
 //8.- Obtén la validación si todos los explorers tienen la propiedad isFinished del onboarding como true. Usa EVERY.
+const areAllTrue = explorers.every((explorer) =>  explorer.missions.onboarding.isFinished === true)
+console.log("¿Todos los explorers tienen la propiedad isFinished del onboarding como true?: " + areAllTrue) //false
 console.log('\n', '-----'.repeat(6), '\n')
