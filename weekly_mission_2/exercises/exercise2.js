@@ -80,7 +80,7 @@ console.log('\n', '-----'.repeat(6), '\n')
 
 //4.- Obtén la lista de explorers que tengan en su stack "js", usa FILTER (para validar un elemento en un lista se usa el método includes)
 console.log('Lista de explorers que saben usar JS:')
-const explorersJs = explorers.filter(explorer => explorer.stack.includes('js'))
+let explorersJs = explorers.filter(explorer => explorer.stack.includes('js'))
 explorersJs.forEach((explorer, index) => console.log(`${++index}. ${explorer.name}`))
 console.log('\n', '-----'.repeat(6), '\n')
 
@@ -92,5 +92,17 @@ console.log(explorers.find(explorer => explorer.city = 'CDMX'))
 console.log('\n', '-----'.repeat(6), '\n')
 
 //6.- 0Obtén la suma de todos los exercises_completed, usa REDUCE
+console.log('Suma de todos los exercises_completed')
+const getTotalAmountCompletedExercises = function (explorersList) {
+    const exercisesCompletedList = explorersList.map(explorer => explorer.exercises_completed)
+    const result_of_reduce = exercisesCompletedList.reduce((acc, exercises) => acc + exercises, 0)
+    return result_of_reduce
+}
+console.log(getTotalAmountCompletedExercises(explorers))
+console.log('\n', '-----'.repeat(6), '\n')
+
 //7.- Obtén la validación si al menos uno de los explorers tiene la propiedad exercisesFinished en frontend como true, usa SOME
+console.log('\n', '-----'.repeat(6), '\n')
+
 //8.- Obtén la validación si todos los explorers tienen la propiedad isFinished del onboarding como true. Usa EVERY.
+console.log('\n', '-----'.repeat(6), '\n')
