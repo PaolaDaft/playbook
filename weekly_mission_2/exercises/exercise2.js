@@ -60,12 +60,16 @@ const explorers = [
 ]
 
 /** Sobre esta lista, realiza lo siguiente:
-1.- Imprime el nombre (propiedad name) de cada explorer en la lista, usa FOR EACH*/
+//1.- Imprime el nombre (propiedad name) de cada explorer en la lista, usa FOR EACH*/
 console.log('Lista de explorers:')
-explorers.forEach((explorer, index) => console.log(`${++index}. ${explorer.name}`))
+explorers.forEach((index, explorer) => console.log(`${++index}. ${explorer.name}`))
 console.log('\n', '-----'.repeat(6), '\n')
 
 //2.- Imprime el stack de cada explorer, usa FOR EACH
+console.log('Stack de cada explorer:')
+explorers.forEach((explorer) => console.log(`${explorer.name}: ${explorer.stack}`))
+console.log('\n', '-----'.repeat(6), '\n')
+
 //3.- Crea una nueva lista con las listas de stacks de cada explorer, usa MAP
 //4.- Obtén la lista de explorers que tengan en su stack "js", usa FILTER (para validar un elemento en un lista se usa el método includes)
 //5.- Busca el primer explorer que sea de la CDMX, usa FIND
