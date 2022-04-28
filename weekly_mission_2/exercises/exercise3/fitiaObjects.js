@@ -9,7 +9,6 @@ class BreakFast {
         this.protein = protein
         this.carbohydrates = carbohydrates
         this.fat = fat
-        this.following = 0
     }
 
     getGeneralInfo() {
